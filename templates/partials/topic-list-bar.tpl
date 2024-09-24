@@ -30,9 +30,11 @@
 				<a class="btn-ghost-sm d-none d-lg-flex align-self-stretch" target="_blank" href="{rssFeedUrl}" itemprop="item" title="[[global:rss-feed]]"><i class="fa fa-rss text-primary"></i></a>
 				{{{ end }}}
 
-				<div class="input-group flex-nowrap w-auto">
-					<input type="text" class="form-control form-control-sm w-auto" placeholder="[[global:search]]" id="topic-search" value="{query}">
-					<span class="input-group-text px-2 search-button"><i class="fa fa-search"></i></span>
+				<div class="search">
+					<div class="input-group flex-nowrap w-auto">
+						<input type="text" class="form-control form-control-sm w-auto" placeholder="[[global:search]]" id="topic-search" value="{query}">
+						<button class="btn btn-primary btn-sm" type="button" aria-label="[[global:search]]"><i class="fa fa-search"></i></button>
+					</div>
 				</div>
 
 				<a href="{{{ if template.category }}}{url}{{{ else }}}{config.relative_path}/{selectedFilter.url}{querystring}{{{ end }}}" class="btn btn-secondary fw-semibold position-absolute top-100 translate-middle-x start-50 mt-1 hide" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" id="new-topics-alert">
